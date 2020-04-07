@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>How It Works</title>
+       <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+</head>
+
+<body>
+
+    <p></p>
+
+<script>
+
+  $(document.ready).ready(function() {
+    $.post(
+      "go.php",
+      {
+        
+      },
+      function(data, status) {
+        var data = JSON.parse(data);
+		document.getElementsByTagName('p')[0].innerHTML = data[0].data;
+        });
+		});
+        
+ </script>
+
+</body>
+
+</html>
